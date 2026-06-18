@@ -17,7 +17,11 @@ export default function Home() {
   // --- CONFIGURACIÓN DE GALERÍAS ---
 
   // Estado escalable: controla qué proyecto está abierto y qué índice de foto
-  const [galleryState, setGalleryState] = useState({
+  const [galleryState, setGalleryState] = useState<{
+    isOpen: boolean;
+    projectKey: 'taller' | 'gomezGol' | null;
+    currentPhotoIndex: number;
+  }>({
     isOpen: false,
     projectKey: null, // 'taller' o 'gomezGol'
     currentPhotoIndex: 0
@@ -41,8 +45,8 @@ export default function Home() {
     ]
   };
 
-  // Funciones de control de galería escalables
-  const openGallery = (projectKey) => {
+  // Funciones de control de galería escalables con Tipado TypeScript estricto corregido
+  const openGallery = (projectKey: 'taller' | 'gomezGol') => {
     setGalleryState({
       isOpen: true,
       projectKey: projectKey,
@@ -58,7 +62,7 @@ export default function Home() {
     return galleryState.projectKey ? projectPhotos[galleryState.projectKey] : [];
   };
 
-  const nextPhoto = (e) => {
+  const nextPhoto = (e: React.MouseEvent) => {
     e.stopPropagation();
     const photos = getCurrentPhotos();
     setGalleryState(prev => ({
@@ -67,7 +71,7 @@ export default function Home() {
     }));
   };
 
-  const prevPhoto = (e) => {
+  const prevPhoto = (e: React.MouseEvent) => {
     e.stopPropagation();
     const photos = getCurrentPhotos();
     setGalleryState(prev => ({
