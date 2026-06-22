@@ -163,7 +163,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
             <div className="space-y-4">
               <h3 className="text-xs font-black uppercase tracking-widest text-blue-600 italic">01. Perfil</h3>
-              <p className="text-2xl font-black leading-tight uppercase">22 Años. <br/>Málaga, España.</p>
+              <p className="text-2xl font-black leading-tight uppercase">23 Años. <br/>Málaga, España.</p>
               <p className="opacity-60 text-sm font-medium">Formado en Desarrollo de Aplicaciones Web (DAW) con gran capacidad de adaptación y trabajo en equipo.</p>
             </div>
             <div className="space-y-4">
@@ -215,7 +215,7 @@ export default function Home() {
                 <div className="absolute inset-0 flex items-center justify-center font-black text-sm uppercase italic opacity-60 tracking-widest">Inventory System</div>
               </div>
               <div className="p-6 space-y-4">
-                <h3 className="text-2xl font-black uppercase italic tracking-tighter">Gomez Moreno IT</h3>
+                <h3 className="text-2xl font-black uppercase italic tracking-tighter">SGIT</h3>
                 <p className="opacity-60 text-xs font-medium h-12 leading-relaxed">Control de inventario tecnológico mediante Spring Boot.</p>
                 <a href="https://github.com/Brica701/gomez_moreno_IT" target="_blank" className={`block w-full py-3 mt-2 rounded-xl text-center font-black text-[9px] uppercase tracking-[0.2em] transition-all ${darkMode ? 'bg-white text-black hover:bg-indigo-500 hover:text-white' : 'bg-slate-900 text-white'}`}>
                   Ver Repositorio
